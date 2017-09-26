@@ -57,7 +57,7 @@ html, body {
   left: 0;
   bottom: 0;
   width: $nav-width;
-  background-color: $nav-bg;
+  background-color: #007a87;
   font-size: 13px;
   font-weight: bold;
 
@@ -74,13 +74,15 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
+    width: 80%;
+    margin: 10px auto;
   }
 
   &>.search {
     position: relative;
 
     input {
-      background: $nav-bg;
+      background: #007a87;
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
@@ -98,6 +100,9 @@ html, body {
       left: $nav-padding;
       color: $nav-text;
       @extend %icon-search;
+    }
+    ::-webkit-input-placeholder {
+      color: #fff;
     }
   }
 
@@ -155,7 +160,7 @@ html, body {
 
   // This is the currently selected ToC entry
   .toc-link.active {
-    background-color: $nav-active-bg;
+    background-color: #fc605c;
     color: $nav-active-text;
   }
 
@@ -473,7 +478,11 @@ html, body {
     }
 
     &.success {
-      background-color: $aside-success-bg;
+      background-color: #58bfb8;
+    }
+
+    &.alert {
+      background-color: #fbd96d;
     }
   }
 
@@ -493,6 +502,10 @@ html, body {
 
   aside.success:before {
     @extend %icon-ok-sign;
+  }
+
+  aside.alert:before {
+    @extend %icon-info-sign;
   }
 
   .search-highlight {
@@ -611,4 +624,10 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.al-screenshot {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
 }
